@@ -1,21 +1,12 @@
-var flip_btn = document.getElementById("flip")
-var back_card = document.getElementById("card1")
-var front_card = document.getElementById("card2")
-var flipped = false
+var cards = document.getElementsByClassName("card");
 
-// flip_btn.style.backgroundColor="red"
-
-flip_btn.addEventListener("click",flipping)
-
-function flipping(){
-if(flipped == false){
-back_card.style.display="none"
-front_card.style.display="block"
+function flipping(event){
+        event.target.classList.toggle("back")
+        event.target.classList.toggle("front")
 }
 
-else{
-back_card.style.display="block"
-front_card.style.display="none"
-}
-flipped = !flipped
+for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+
+    card.addEventListener("click", flipping);
 }

@@ -1,16 +1,19 @@
-#card1{
+.container {
+    display: flex;
+}
+
+.card{
     border: 1px solid black;
-    width: 300px; 
-    height: 439px;
-    background-image: url(./back_card_yugioh.jpg);
+    min-width: 300px; 
+    min-height: 439px;
     background-size: contain;
     display: block;
 }
-#card2{
-    border: 1px solid black;
-    width: 300px; 
-    height: 439px;
+
+.back {
+    background-image: url(./back_card_yugioh.jpg);
+}
+
+.front {
     background-image: url(./RO_front.png);
-    background-size: contain;
-    display: none;
 }
